@@ -1,0 +1,384 @@
+<!-- MAIN CONTENT
+================================================== -->
+<div class="main-content">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="container-fluid">
+
+      <!-- Body -->
+      <div class="header-body">
+        <div class="row align-items-end">
+          <div class="col">
+            <!-- Title -->
+            <h1 class="header-title display-3">
+              ${{investmentBalance.toFormat(2)}}
+            </h1>
+            <!-- Pretitle -->
+            <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-2">
+              Pools value
+              <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                USD <i class="fe fe-chevron-down text-secondary"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+                <a class="dropdown-item" href="#!">EUR</a>
+                <a class="dropdown-item" href="#!">BTC</a>
+                <a class="dropdown-item" href="#!">ETH</a>
+              </div>
+            </div>
+            <!-- Button -->
+            <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-lg btn-primary lift mb-5 mr-3">
+              Buy pools shares
+            </a>
+            <ul class="nav nav-tabs header-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active text-center font-weight-bold h3 mb-0" id="myPools-tab" data-toggle="tab" href="#myPools" role="tab" aria-controls="myPools" aria-selected="true">My pools</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center font-weight-bold h3 mb-0" id="allPools-tab" data-toggle="tab" href="#allPools" role="tab" aria-controls="allPools" aria-selected="false">All Pools <span class="badge badge-soft-primary ml-2">New</span></a>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .header-body -->
+
+    </div>
+  </div> <!-- / .header -->
+
+  <!-- CARDS -->
+  <div class="container-fluid mb-6">
+    <div class="tab-content mb-5" id="myTabContent">
+      <div class="tab-pane fade show active" id="myPools" role="tabpanel" aria-labelledby="myPools-tab">
+        
+        <div class="row d-flex-wrap">
+          <!-- pool -->
+          <div class="col-6">
+
+            <a routerLink="/pool">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col mb-3 mb-lg-0">
+
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-3">
+                        Pool title
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0 mr-2 d-block">
+                        ${{investmentBalance.toFormat(4)}}
+                      </span>
+                      <!-- Heading -->
+                      <span class="small text-secondary">
+                        {{sharesBalance.toFormat(4)}} shares
+                      </span>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <div class="avatar avatar-sm">
+                        <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+              </div>
+            </a>
+
+          </div> 
+
+          <!-- pool -->
+          <div class="col-6">
+
+            <a routerLink="/pool">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col mb-3 mb-lg-0">
+
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-3">
+                        Pool title
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0 mr-2 d-block">
+                        ${{investmentBalance.toFormat(4)}}
+                      </span>
+                      <!-- Heading -->
+                      <span class="small text-secondary">
+                        {{sharesBalance.toFormat(4)}} shares
+                      </span>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <div class="avatar avatar-sm">
+                        <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <!-- fund -->
+          <div class="col-6">
+
+            <a routerLink="/pool">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col mb-3 mb-lg-0">
+
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-secondary mb-3">
+                        Pool title
+                      </h6>
+
+                      <!-- Heading -->
+                      <span class="h2 mb-0 mr-2 d-block">
+                        ${{investmentBalance.toFormat(4)}}
+                      </span>
+                      <!-- Heading -->
+                      <span class="small text-secondary">
+                        {{sharesBalance.toFormat(4)}} shares &bull; 23/100 survivors
+                      </span>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <div class="avatar avatar-sm">
+                        <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      <div class="tab-pane fade" id="allPools" role="tabpanel" aria-labelledby="allPools-tab">
+        <!-- all pools -->
+        <div class="card">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Title -->
+                <h4 class="card-header-title">
+                  All pools
+                </h4>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+          <div class="table-responsive mb-0">
+            <style>
+              .fixcol {
+                position: absolute;
+                width: 8rem;
+                right: 0;
+                top: auto;
+                border-bottom-width: 0px;
+              }
+            </style>
+            <table class="table table-sm table-nowrap card-table">
+              <thead>
+                <tr>
+                  <th class="text-secondary">
+                    Pool address
+                  </th>
+                  <th class="text-secondary">
+                   Est. Weekly ROI
+                  </th>
+                  <th class="text-secondary">
+                    Est. APY (unstable)
+                  </th>
+                  <th class="text-secondary">
+                    Assets
+                  </th>                  
+                  <th class="text-secondary">
+                    Rewards
+                  </th>
+                  <th class="text-secondary">
+                    Life signal
+                  </th>
+                  <th class="text-secondary">
+                    Launch date
+                  </th>
+                  <th class="text-secondary">
+                    Pool lifetime (days)
+                  </th>
+                  <th class="text-secondary">
+                    Fee
+                  </th>
+                  <th class="text-secondary pr-8">
+                    Subscribed/Total
+                  </th>
+                  <th class="text-secondary text-right fixcol">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <td>                    
+                    <a href="https://etherscan.io/token/0x95c4b6c7cff608c0ca048df8b81a484aa377172b" target="_blank">
+                      <div class="avatar avatar-xs mr-2">
+                        <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+                      0x65..0334
+                    </a>
+                  </td>
+                  <td>
+                    0.0000%
+                  </td>
+                  <td>
+                    0.0000%
+                  </td>
+                  <td>
+                    <a href="https://etherscan.io/token/0x95c4b6c7cff608c0ca048df8b81a484aa377172b" target="_blank">
+                      <div class="avatar avatar-xs mr-2">
+                        <img src="assets/img/Aave_aUSDC_32.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+                      Aave Interes... (aUSDC)
+                    </a>
+                  </td>
+                  <td>
+                    Weekly
+                  </td>
+                  <td>
+                    Weekly
+                  </td>
+                  <td>
+                    2020-08-09 23:59:00
+                  </td>
+                  <td>
+                    90
+                  </td>
+                  <td>
+                    0.15%
+                  </td>
+                  <td class="pr-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-warning text-dark" role="progressbar"  style="width: 70%">70/100</div>
+                    </div>
+                  </td>
+                  <td class="text-right fixcol">
+                    <button class="btn btn-sm btn-primary" type="button" name="button" data-toggle="modal" data-target="#depositMoney">Subscribe</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>                    
+                    <a href="https://etherscan.io/token/0x95c4b6c7cff608c0ca048df8b81a484aa377172b" target="_blank">
+                      <div class="avatar avatar-xs mr-2">
+                        <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+                      0x65..0334
+                    </a>
+                  </td>
+                  <td>
+                    0.0000%
+                  </td>
+                  <td>
+                    0.0000%
+                  </td>
+                  <td>
+                    <a href="https://etherscan.io/token/0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8" target="_blank">
+                      <div class="avatar avatar-xs mr-2">
+                        <img src="assets/img/Curvefi_yCrv_32.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+                      Curve.fi yDA...(yDAI+y...)
+                    </a>
+                  </td>
+                  <td>
+                    Weekly
+                  </td>
+                  <td>
+                    Weekly
+                  </td>
+                  <td>
+                    2020-08-09 23:59:00
+                  </td>
+                  <td>
+                    90
+                  </td>
+                  <td>
+                    0.15%
+                  </td>
+                  <td class="pr-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-warning text-dark" role="progressbar"  style="width: 70%">70/100</div>
+                    </div>
+                  </td>
+                  <td class="text-right fixcol">
+                    <button class="btn btn-sm btn-primary" type="button" name="button" data-toggle="modal" data-target="#depositMoney">Subscribe</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>                    
+                    <a href="https://etherscan.io/token/0x95c4b6c7cff608c0ca048df8b81a484aa377172b" target="_blank">
+                      <div class="avatar avatar-xs mr-2">
+                        <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+                      0x65..0334
+                    </a>
+                  </td>
+                  <td>
+                    0.0000%
+                  </td>
+                  <td>
+                    0.0000%
+                  </td>
+                  <td>
+                    <a href="https://etherscan.io/token/0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8" target="_blank">
+                      <div class="avatar avatar-xs mr-2">
+                        <img src="assets/img/empty-token.png" class="avatar-img rounded-circle" alt="...">
+                      </div>
+                      YFI-yCRV Balancer Poo... (BPT)
+                    </a>
+                  </td>
+                  <td>
+                    Weekly
+                  </td>
+                  <td>
+                    Weekly
+                  </td>
+                  <td>
+                    2020-08-09 23:59:00
+                  </td>
+                  <td>
+                    90
+                  </td>
+                  <td>
+                    0.15%
+                  </td>
+                  <td class="pr-7">
+                    <div class="progress">
+                      <div class="progress-bar bg-warning text-dark" role="progressbar"  style="width: 70%">70/100</div>
+                    </div>
+                  </td>
+                  <td class="text-right fixcol">
+                    <button class="btn btn-sm btn-primary" type="button" name="button" data-toggle="modal" data-target="#depositMoney">Subscribe</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+
+</div><!-- / .main-content -->
+<modal-buy-share></modal-buy-share>
+<modal-sell-share></modal-sell-share>

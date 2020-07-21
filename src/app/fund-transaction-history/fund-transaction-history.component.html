@@ -1,0 +1,62 @@
+<!-- Goals -->
+<div class="card">
+  <div class="card-header">
+    <div class="row align-items-center">
+      <div class="col">
+
+        <!-- Title -->
+        <h4 class="card-header-title">
+          Transactions history
+        </h4>
+
+      </div>
+    </div> <!-- / .row -->
+  </div>
+  <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+    <table class="table table-sm table-nowrap card-table">
+      <thead>
+        <tr>
+          <th>
+            <a href="#" class="text-secondary list-sort" data-sort="tx-type">
+              Type
+            </a>
+          </th>
+          <th>
+            <a href="#" class="text-secondary list-sort" data-sort="tx-amount">
+              Amount (DAI)
+            </a>
+          </th>
+          <th>
+            <a href="#" class="text-secondary list-sort" data-sort="tx-Timestamp">
+              Timestamp
+            </a>
+          </th>
+          <th class="text-center">
+            <a href="#" class="text-secondary">
+              Transaction
+            </a>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="list">
+        <tr *ngFor="let entry of depositWithdrawHistory">
+          <td class="tx-type" *ngIf="entry.isDeposit" >
+            <i class="fe fe-download mr-2"></i> Buy
+          </td>         
+          <td class="tx-type" *ngIf="!entry.isDeposit" >
+            <i class="fe fe-upload mr-2"></i> Sell
+          </td>
+          <td class="type-amount text-success">
+            ${{toBigNumber(entry.amountInDAI).toFormat(4)}}
+          </td>
+          <td class="tx-timestamp">
+            {{toDateTimeString(entry.timestamp)}}
+          </td>
+          <td class="text-center">
+            <a class="btn btn-white align-items-center" target="_blank" href="https://etherscan.io/tx/{{entry.txHash}}"><i class="fe fe-external-link"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

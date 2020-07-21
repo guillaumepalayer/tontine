@@ -1,0 +1,123 @@
+<!-- IDEA: modal depositMoney -->
+<div class="modal fade fixed-right" id="depositMoney" tabindex="-1" role="dialog" aria-labelledby="depositMoney" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-vertical" role="document">
+    <div class="modal-content">
+      <div class="modal-body p-lg-0">
+        <div class="d-inline-block w-lg-60">
+          <button class="btn btn-link text-secondary position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+            <i class="fe fe-arrow-left h2"></i>
+          </button>
+          <div class="row justify-content-center">
+            <div class="col col-lg-8">
+              <!-- Heading -->
+              <h1 class="display-4 text-center my-5">
+                Buy shares
+              </h1>
+
+              <div class="card">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label class="mt-1">Buy</label>
+                    <div class="input-group mb-4">
+                      <select class="custom-select custom-select-lg">
+                        <option value="fundtitle">Pool share A</option>
+                        <option value="fundtitle">Pool share B</option>
+                        <option value="fundtitle">Pool share C</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Amount</label>
+                    <div class="input-group mb-2">
+                      <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                      <div class="input-group-append">
+                        <button class="btn border" type="button">Max</button>
+                      </div>
+                    </div>
+                    <small class="form-text text-secondary mb-4">100.0000 Curve.fi yDA...(yDAI+y...) available</small>
+                  </div>
+                  <div class="table-responsive d-block d-lg-none mb-4">
+                    <table class="table mb-0">
+                      <thead>
+                        <tr>
+                          <th class="px-0 bg-transparent border-0 text-white">Order details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="px-0 border-0 text-white">
+                            <strong>Share price (USD)</strong>
+                          </td>
+                          <td class="px-0 text-right text-white border-0">
+                            0.00
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0 text-white border-0">
+                            <strong>Shares to receive</strong>
+                          </td>
+                          <td class="px-0 text-white text-right border-0">
+                            0.0000
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0 border-top border-top-1 border-white text-white"><strong>Total cost (USD)</strong></td>
+                          <td colspan="2" class="px-0 text-right border-top border-top-1 border-white text-white">
+                            <span class="h3">0.0000</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <a class="btn btn-primary btn-lg btn-block" href="">Buy Fund share A</a>
+                </div>
+              </div>
+              <a class="btn btn-sm btn-link btn-block mb-6" href="https://gitbook.com" target="_blank">Need help?</a>              
+            </div>
+          </div>
+        </div>
+        <div class="d-lg-inline-block w-lg-40 position-fixed d-none border-left">
+          <div class="bg-lighter  vh-100 p-4">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <div class="table-responsive">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th class="px-0 bg-transparent border-0">Order details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="px-0 border-0">
+                          <strong>Share price (USD)</strong>
+                        </td>
+                        <td class="px-0 text-right border-0">
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 border-0">
+                          <strong>Shares to receive</strong>
+                        </td>
+                        <td class="px-0 text-right border-0">
+                          0.0000
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-0 border-top border-top-1"><strong>Total cost (USD)</strong></td>
+                        <td colspan="2" class="px-0 text-right border-top border-top-1">
+                          <span class="h3">0.0000</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- / modal -->

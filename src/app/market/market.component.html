@@ -1,0 +1,96 @@
+<!-- MAIN CONTENT
+================================================== -->
+<div class="main-content">
+
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <div class="header">
+    <div class="container-fluid">
+      <!-- Body -->
+      <div class="header-body">
+        <h1 class="display-3 mt-3 mb-0 d-none d-lg-block">
+          Market
+        </h1>
+        <h1 class="display-4 mt-3 d-block d-lg-none">
+          Market
+        </h1>
+      </div> <!-- / .header-body -->
+
+    </div>
+  </div> <!-- / .header -->
+
+  <!-- CARDS -->
+  <div class="container-fluid mb-6">
+    <!-- Goals -->
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <!-- Title -->
+            <h4 class="card-header-title">
+              Assets price
+            </h4>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      <div class="table-responsive mb-0">
+        <table class="table table-sm table-nowrap card-table">
+          <thead>
+            <tr>
+              <th class="text-secondary">
+                Asset
+              </th>
+              <th class="text-secondary">
+                Price (USD)
+              </th>
+              <th class="text-secondary">
+                24H
+              </th>
+              <th class="text-secondary">
+                1W
+              </th>
+              <th class="text-secondary">
+                1M
+              </th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            <tr *ngFor="let token of tokenData">
+              <td>
+                <div class="avatar avatar-sm mr-2">
+                  <img src={{token.logoUrl}} alt="{{token.symbol}} token logo" class="avatar-img rounded-circle">
+                </div>
+                {{token.symbol}}
+              </td>
+              <td>
+                {{token.price.toFixed(6)}}
+              </td>
+              <td>
+                <span [ngClass]="{'text-success': +token.dailyPriceChange >= 0, 'text-danger': 0 > +token.dailyPriceChange}">
+                  <i class="fe"[ngClass]="{'fe-arrow-up-right': +token.dailyPriceChange >= 0, 'fe-arrow-down-right': 0 > +token.dailyPriceChange}"></i>
+                  {{token.dailyPriceChange.isNaN() ? 'Not available' : token.dailyPriceChange.toFixed(4) + '%'}}
+                </span>
+              </td>
+              <td>
+                <span [ngClass]="{'text-success': +token.weeklyPriceChange >= 0, 'text-danger': 0 > +token.weeklyPriceChange}">
+                  <i class="fe"[ngClass]="{'fe-arrow-up-right': +token.weeklyPriceChange >= 0, 'fe-arrow-down-right': 0 > +token.weeklyPriceChange}"></i>
+                  {{token.weeklyPriceChange.isNaN() ? 'Not available' : token.weeklyPriceChange.toFixed(4) + '%'}}
+                </span>
+              </td>
+              <td>
+                <span [ngClass]="{'text-success': +token.monthlyPriceChange >= 0, 'text-danger': 0 > +token.monthlyPriceChange}">
+                  <i class="fe"[ngClass]="{'fe-arrow-up-right': +token.monthlyPriceChange >= 0, 'fe-arrow-down-right': 0 > +token.monthlyPriceChange}"></i>
+                  {{token.monthlyPriceChange.isNaN() ? 'Not available' : token.monthlyPriceChange.toFixed(4) + '%'}}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+
+</div><!-- / .main-content -->

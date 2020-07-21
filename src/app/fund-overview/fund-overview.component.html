@@ -1,0 +1,251 @@
+
+<div class="row">
+  <div class="col-12 col-lg-6">
+
+    <!-- stat -->
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mb-3 mb-lg-0">
+
+            <!-- Title -->
+            <h6 class="text-uppercase text-secondary mb-2">
+              Total holdings
+            </h6>
+
+            <!-- Heading -->
+            <span class="h2 mb-0 mr-2">
+              0.0000 shares
+              <span class="small align-baseline text-secondary">0.0000% of the pool</span>
+            </span>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div>
+
+  </div>
+  <div class="col-12 col-lg-6">
+
+    <!-- stat -->
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mb-3 mb-lg-0">
+
+            <!-- Title -->
+            <h6 class="text-uppercase text-secondary mb-2">
+              Rewards available
+            </h6>
+
+            <!-- Heading -->
+            <span class="h2 mb-0 mr-2">
+              $0.0000
+            </span>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div>
+
+  </div>
+</div> <!-- / .row -->
+<div class="row">
+  <div class="col-12 col-lg-6">
+
+    <!-- stat -->
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mb-3 mb-lg-0">
+
+            <!-- Title -->
+            <h6 class="text-uppercase text-secondary mb-2">
+              Share price &bull; USD
+            </h6>
+
+            <!-- Heading -->
+            <span class="h2 mb-0 mr-2">
+              ${{sharesPrice.toFormat(4)}} <span class="small align-top"[ngClass]="{'text-success': currMoROI.gte(0), 'text-danger': currMoROI.lt(0)}">
+                <i class="fe" [ngClass]="{'fe-arrow-up-right': currMoROI.gte(0), 'fe-arrow-down-right': currMoROI.lt(0)}"></i>{{currMoROI.toFormat(4)}}% this week</span>
+            </span>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div>
+
+  </div>
+  <div class="col-12 col-lg-6">
+
+    <!-- stat -->
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mb-3 mb-lg-0">
+
+            <!-- Title -->
+            <h6 class="text-uppercase text-secondary mb-2">
+              APY
+            </h6>
+
+            <!-- Heading -->
+            <span class="h2 mb-0 mr-2" [ngClass]="{'text-success': apy.gte(0), 'text-danger': apy.lt(0)}">
+              <i class="fe" [ngClass]="{'fe-arrow-up-right': apy.gte(0), 'fe-arrow-down-right': apy.lt(0)}"></i>{{apy.toFixed(2)}}%
+            </span>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div>
+
+  </div>
+</div> <!-- / .row -->
+<div class="row">
+  <div class="col-12 col-lg-6">
+
+    <!-- stat -->
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mb-3 mb-lg-0">
+
+            <!-- Title -->
+            <h6 class="text-uppercase text-secondary mb-2">
+              PRICE CHANGE (Since inception)
+            </h6>
+
+            <!-- Heading -->
+            <span class="h2 mb-0 mr-2 text-success">
+              <i class="fe fe-arrow-up-right" ></i>60.0204%
+            </span>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div>
+
+  </div>
+  <div class="col-12 col-lg-6">
+
+    <!-- stat -->
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mb-3 mb-lg-0">
+
+            <!-- Title -->
+            <h6 class="text-uppercase text-secondary mb-2">
+              Pool value (USD)
+            </h6>
+
+            <!-- Heading -->
+            <span class="h2 mb-0 mr-2">
+              {{AUM.toFormat(4)}}
+            </span>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+    </div>
+
+  </div>
+</div> <!-- / .row -->
+<div class="row">
+  <div class="col-12">
+    <!-- fund details -->
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <!-- Title -->
+            <h4 class="card-header-title">
+              Pool details
+            </h4>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      <div class="card-body">
+        
+      <div class="table-responsive mb-0">
+        <table class="table mb-0">
+          <tbody>
+
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Pool address</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                <a class="d-block text-truncate ml-auto" href="#" target="_blank" style="width: 6rem;">0x5200000000000000000000</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Est. Weekly ROI</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                0.0000%
+              </td>
+            </tr>
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Est. APY (unstable)</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                0.0000%
+              </td>
+            </tr>
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Assets</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                <a href="https://etherscan.io/token/0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8" target="_blank">
+                  <div class="avatar avatar-xs mr-2">
+                    <img src="assets/img/Curvefi_yCrv_32.png" class="avatar-img rounded-circle" alt="...">
+                  </div>
+                  Curve.fi yDA...(yDAI+y...)
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Rewards</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                Weekly
+              </td>
+            </tr>
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Life signal</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                Weekly
+              </td>
+            </tr>
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Pool ends on</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                2021-08-09 23:59:00
+              </td>
+            </tr>
+            <tr>
+              <td class="px-0 border-0">
+                <strong>Fee</strong>
+              </td>
+              <td class="px-0 text-right border-0">
+                0.15% of final pool value
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

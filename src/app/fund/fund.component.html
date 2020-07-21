@@ -1,0 +1,81 @@
+<!-- MAIN CONTENT
+================================================== -->
+<div class="main-content">
+  <!-- HEADER -->
+  <div class="header border-0">
+    <div class="container-fluid">
+      <!-- Body -->
+      <div class="header-body">
+        <div class="row align-items-end">
+          <div class="col">
+            <div class="row justify-content-between align-items-center mb-4">
+              <div class="col">
+                <nav aria-label="breadcrumb" *ngIf="router.url === '/pool'">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="/pools">Pools</a></li>
+                    <li class="breadcrumb-item active" aria-current="pool">Pool title</li>
+                  </ol>
+                </nav>
+                <h1 class="display-3 mt-3 mb-0 d-none d-lg-block">
+                  ${{investmentBalance.toFormat(2)}}
+                </h1>
+                <h1 class="display-4 mt-3 mb-1 d-block d-lg-none">
+                  ${{investmentBalance.toFormat(2)}}
+                </h1>
+                <!-- Pretitle -->
+                <div class="dropdown mb-0 d-flex align-items-center text-secondary mb-2">
+                  Pool value
+                  <button class="btn btn-link pl-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    USD <i class="fe fe-chevron-down text-secondary"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+                    <a class="dropdown-item" href="#!">EUR</a>
+                    <a class="dropdown-item" href="#!">BTC</a>
+                    <a class="dropdown-item" href="#!">ETH</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+
+                <div class="avatar avatar-sm d-flex d-lg-none">
+                  <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                </div>
+                <div class="avatar avatar-xl d-none d-lg-flex">
+                  <img src="assets/img/avatars/profiles/eth-address.png" class="avatar-img rounded-circle" alt="...">
+                </div>
+
+              </div>
+            </div>
+            <!-- Button -->
+            <button class="btn btn-lg btn-primary lift mb-5 mr-3" type="button">
+            <i class="fe fe-activity h3 mr-2 align-bottom"></i> I'm alive + Claim + Stake rewards
+            </button>
+            <button class="btn btn-lg btn-white lift mb-5" type="button">
+            <i class="fe fe-activity h3 mr-2 align-bottom"></i> I'm alive + Claim rewards
+            </button>
+            
+            <!-- Title -->
+            <h4>
+              Current survivors/initial subscribers
+            </h4>
+            <div class="progress mb-4">
+              <div class="progress-bar bg-warning text-dark font-weight-bold" role="progressbar"  style="width: 70%">70/100</div>
+            </div>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .header-body -->
+
+    </div>
+  </div> <!-- / .header -->
+
+  <!--  -->
+  <div class="container-fluid mb-6">
+    <app-fund-overview></app-fund-overview>
+
+    <app-footer></app-footer>
+  </div>
+
+</div><!-- / .main-content -->
+
+<modal-buy-share></modal-buy-share>
+<modal-sell-share></modal-sell-share> 
