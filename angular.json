@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Betoken": {
+    "Tontine": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/Betoken",
+            "outputPath": "dist/Tontine",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,7 +73,7 @@
             },
             "zh-Hans": {
               "aot": true,
-              "outputPath": "dist/Betoken/zh-Hans",
+              "outputPath": "dist/Tontine/zh-Hans",
               "i18nFile": "src/locale/messages.zh-Hans.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "zh-Hans",
@@ -95,7 +95,7 @@
             },
             "ja": {
               "aot": true,
-              "outputPath": "dist/Betoken/ja",
+              "outputPath": "dist/Tontine/ja",
               "i18nFile": "src/locale/messages.ja.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "ja",
@@ -117,7 +117,7 @@
             },
             "pt": {
               "aot": true,
-              "outputPath": "dist/Betoken/pt",
+              "outputPath": "dist/Tontine/pt",
               "i18nFile": "src/locale/messages.pt.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "pt",
@@ -142,27 +142,27 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "Betoken:build"
+            "browserTarget": "Tontine:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Betoken:build:production"
+              "browserTarget": "Tontine:build:production"
             },
             "zh-Hans": {
-              "browserTarget": "Betoken:build:zh-Hans"
+              "browserTarget": "Tontine:build:zh-Hans"
             },
             "ja": {
-              "browserTarget": "Betoken:build:ja"
+              "browserTarget": "Tontine:build:ja"
             },
             "pt": {
-              "browserTarget": "Betoken:build:pt"
+              "browserTarget": "Tontine:build:pt"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Betoken:build"
+            "browserTarget": "Tontine:build"
           }
         },
         "test": {
@@ -202,7 +202,7 @@
         }
       }
     },
-    "Betoken-e2e": {
+    "Tontine-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -210,11 +210,11 @@
           "builder": "@angular-builders/custom-webpack:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Betoken:serve"
+            "devServerTarget": "Tontine:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Betoken:serve:production"
+              "devServerTarget": "Tontine:serve:production"
             }
           }
         },
@@ -230,5 +230,5 @@
       }
     }
   },
-  "defaultProject": "Betoken"
+  "defaultProject": "Tontine"
 }
