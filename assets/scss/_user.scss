@@ -1,0 +1,38 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+
+.rounded-xl{
+  border-radius: 20px
+}
+.modal-dialog-vertical{
+  max-width: 100%;
+}
+
+// IDEA: background-colors
+.bg-dark-curved {
+  background-color: transparent!important;
+  background-image: radial-gradient(#131415,#131415 70%,transparent 70.1%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 200% 150%;
+}
+.bg-dark{
+  background-color: #131415
+}
+// IDEA: buttons
+.btn-white-opacity{
+  width: 88px!important;
+  height: 88px!important;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 1024px) {
+  .w-lg-60{width: 60%};
+  .w-lg-40{width: 40%}
+}
+@media (max-width: 768px) {
+  .modal-dialog-vertical{
+    max-width: 100%;
+  }
+}
