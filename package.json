@@ -35,7 +35,7 @@
     "graphql": "^14.3.1",
     "graphql-tag": "^2.10.0",
     "i18n-extract": "^0.6.7",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "kind-of": "^6.0.3",
     "list.js": "^1.5.0",
     "minimist": "^1.2.5",
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "^8.4.1",
-    "@angular-devkit/build-angular": "~0.803.21",
+    "@angular-devkit/build-angular": "^0.1000.5",
     "@angular/cli": "~8.3.21",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
