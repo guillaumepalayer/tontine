@@ -37,7 +37,7 @@ export class HeaderComponent extends ApolloEnabled implements OnInit {
     inputElement.setSelectionRange(0, 0);
   }
 
-  constructor(private ms: AppComponent, private router: Router, private apollo: Apollo) {
+  constructor(private ms: AppComponent, public router: Router, private apollo: Apollo) {
     super();
 
     this.days = 0;

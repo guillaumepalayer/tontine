@@ -63,7 +63,7 @@ export class FundComponent extends ApolloEnabled implements OnInit {
 
   isLoading: Boolean;
 
-  constructor(private router: Router, private apollo: Apollo) {
+  constructor(public router: Router, private apollo: Apollo) {
     super();
 
     this.sharesPrice = new BigNumber(0);
